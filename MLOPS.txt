@@ -1,0 +1,43 @@
+MLOPS:
+1. set up the GitHub(Repository)
+We work in a team, so all of them will collaborate same time like they will develop, commit, merge the code) We need a repo so our development will be in sync.
+	a. New Environment
+	b. setup.py
+	c. Requirements.txt
+	d. src folder and build package
+
+Steps for new environment:
+Open GitHub and create new repository
+Create a folder MLOPS 
+Then open anaconda and go to the MLOPS folder path
+	Cmd : code . (Which will open vscode and go to terminal for setting up the environment)
+	In the MLOPS folder where the environment will get created and package we download will be available here
+Now we need to sync our GitHub repository
+Create a environment -->	 conda create -p venv python==3.8 -y
+To activate the environment -->  conda activate venv/
+Clone the GitHub repo (Follow the comments in github)
+	git init
+	Add the readme.md file(In vscode) - It's like description or the steps we follow
+	git add readme.md
+	git commit -m "First Commit"
+	git status
+	git branch -M main
+	git remote add origin https://github.com/yogesh5898/mlproject.git
+	git config --global user.name "Yogesh S"
+	git config --global user.email "yogesh050898@gmail.com"
+	git push -u origin main	
+	
+ 	Add .gitignore file then commit the changes
+	To reflect the change in vscode --> git pull 
+
+steps for setup.py and Requirements.txt:
+	Create a file in vscode	(Which is responsible for creating our machine learning application as a package)
+	In setup we define metadata information about our project
+	Then this setup.py will find what are the packages available through src folder
+	so create a folder src --> under that create __init__.py (Then this src folder will be found as a package)
+	In setup.py we have find_packages() at the time of running this will check the available folder with __init_.py then it start build. 
+	Once the build completed we can use it anywhere like how we import numpy and pandas
+	The entire project development will happen over this src folder
+	-e . in requirements.txt file which will automatically read setiup.py file
+	while the setup.py file reading the requirements.txt then it will read e . also it should no need to read
+	Then pip install -r requirements.txt
