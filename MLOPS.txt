@@ -41,3 +41,14 @@ steps for setup.py and Requirements.txt:
 	-e . in requirements.txt file which will automatically read setiup.py file
 	while the setup.py file reading the requirements.txt then it will read e . also it should no need to read
 	Then pip install -r requirements.txt
+
+
+Create components(modules we going to use in project) folder and __init_.py, data_ingestion, data_transformation under src folder
+This data_ingestion will have the information related to reading the data. Then we do split the data for training and testing
+After reading data we do data validation and transformation
+data_transformation will have onehot, label, categorical to numbers.
+model_trainer - we will create a model, performance evaluation
+
+create pipeline folder - training_pipline from this we trigger remaining components.
+			 predict_pipeline and __init__.py
+Create logger and exception file under src folder
