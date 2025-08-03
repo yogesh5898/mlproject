@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 from typing import List
 
 HYPEN_E='-e .'
-def get_requirements(filepath:str)->list[str]:
+def get_requirements(filepath: str) -> List[str]:
     """
     This will return list of requirements
     """

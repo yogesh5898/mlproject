@@ -51,4 +51,17 @@ model_trainer - we will create a model, performance evaluation
 
 create pipeline folder - training_pipline from this we trigger remaining components.
 			 predict_pipeline and __init__.py
-Create logger and exception file under src folder
+
+Create logger and exception and utils(functionality written in common and used in entire application) file under src folder
+
+Exception file:
+sys - python provide various functions and variables that are used to manipulate different parts of python runtime environment(any exception is getting controlled this sys libray will automatically have that information)
+This error_details.exc_info() will tell on which file the exception occurred and line number exception occurred.
+
+Logger file:
+Any execution happens it should be able to log all those information. so we can track  
+
+  git status
+  git add .
+  git commit -m "logging and exception"
+  git push -u origin main
