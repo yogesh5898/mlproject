@@ -1,3 +1,6 @@
+To activate venv : .\venv\Scripts\Activate.ps1
+
+
 MLOPS:
 1. set up the GitHub(Repository)
 We work in a team, so all of them will collaborate same time like they will develop, commit, merge the code) We need a repo so our development will be in sync.
@@ -40,7 +43,7 @@ steps for setup.py and Requirements.txt:
 	The entire project development will happen over this src folder
 	-e . in requirements.txt file which will automatically read setiup.py file
 	while the setup.py file reading the requirements.txt then it will read e . also it should no need to read
-	Then pip install -r requirements.txt
+	Then f
 
 
 Create components(modules we going to use in project) folder and __init_.py, data_ingestion, data_transformation under src folder
@@ -55,7 +58,7 @@ create pipeline folder - training_pipline from this we trigger remaining compone
 Create logger and exception and utils(functionality written in common and used in entire application) file under src folder
 
 Exception file:
-sys - python provide various functions and variables that are used to manipulate different parts of python runtime environment(any exception is getting controlled this sys libray will automatically have that information)
+sys - python provide various functions and variables that are used to manipulate different parts of python runtime environment(any exception is getting controlled this sys library will automatically have that information)
 This error_details.exc_info() will tell on which file the exception occurred and line number exception occurred.
 
 Logger file:
@@ -65,3 +68,10 @@ Any execution happens it should be able to log all those information. so we can 
   git add .
   git commit -m "logging and exception"
   git push -u origin main
+
+
+
+data Ingestion:
+We worked in Jupiter notebook and we will convert this to modular coding for continuous running in production
+
+
